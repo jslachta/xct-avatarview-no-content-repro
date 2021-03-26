@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
+             x:Class="NoContenXForms.MainPage">
+
+    <StackLayout Orientation="Vertical">
+        <xct:AvatarView 
+                    FontSize="Medium"
+                    HeightRequest="40"
+                    WidthRequest="40"
+                    Text="YES">
+            <xct:AvatarView.Source>
+                <UriImageSource 
+                            CacheValidity="00:30:00"
+                            CachingEnabled="True" 
+                            Uri="{Binding ImageUrl}" />
+            </xct:AvatarView.Source>
+        </xct:AvatarView>
+        <xct:AvatarView 
+                    FontSize="Medium"
+                    HeightRequest="40"
+                    WidthRequest="40"
+                    Text="NO">
+            <xct:AvatarView.Source>
+                <UriImageSource 
+                            CacheValidity="00:30:00"
+                            CachingEnabled="True" 
+                            Uri="{Binding NoContentUrl}" />
+            </xct:AvatarView.Source>
+        </xct:AvatarView>
+    </StackLayout>
+
+</ContentPage>
